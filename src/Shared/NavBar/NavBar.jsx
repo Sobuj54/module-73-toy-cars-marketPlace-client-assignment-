@@ -4,20 +4,22 @@ import logo from "../../assets/logo/vecteezy_car-toys-kid-logo_.jpg";
 const NavBar = () => {
   const list = (
     <>
-      <li>
-        <Link to="/">Home</Link>
+      <li className="hover:bg-green-500 rounded-lg">
+        <Link to="/" className="hover:text-white">
+          Home
+        </Link>
       </li>
-      <li>
-        <Link>All Toys</Link>
+      <li className="hover:bg-amber-500 rounded-lg">
+        <Link className="hover:text-white">All Toys</Link>
       </li>
-      <li>
-        <Link>My Toys</Link>
+      <li className="hover:bg-lime-500 rounded-lg">
+        <Link className="hover:text-white">My Toys</Link>
       </li>
-      <li>
-        <Link>Add a toy</Link>
+      <li className="hover:bg-teal-500 rounded-lg">
+        <Link className="hover:text-white">Add a toy</Link>
       </li>
-      <li>
-        <Link>Blogs</Link>
+      <li className="hover:bg-fuchsia-500 rounded-lg">
+        <Link className="hover:text-white">Blogs</Link>
       </li>
     </>
   );
