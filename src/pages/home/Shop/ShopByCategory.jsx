@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import CategoryCars from "./CategoryCars";
 
 const ShopByCategory = () => {
   const [tabIndex, setTabIndex] = useState(0);
   const [allCars, setAllCars] = useState([]);
+  console.log(tabIndex);
 
   useEffect(() => {
     fetch("toys.json")
@@ -14,6 +16,12 @@ const ShopByCategory = () => {
       });
   }, []);
 
+  const sportsCar = allCars.filter((cars) => cars.category === "Sports Car");
+  const truck = allCars.filter((cars) => cars.category === "Truck");
+  const car = allCars.filter((cars) => cars.category === "Regular Car");
+  const fireTruck = allCars.filter((cars) => cars.category === "Fire Truck");
+  const policeCar = allCars.filter((cars) => cars.category === "Police Car");
+
   return (
     <div className="bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 lg:pt-20">
       <div className="text-center mb-4">
@@ -23,16 +31,31 @@ const ShopByCategory = () => {
         </p>
         <p>{allCars.length}</p>
       </div>
+
+      {/* this tab will hold entire tab section */}
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+        {/* tablist created tab title */}
         <TabList className="flex w-2/12 mx-auto gap-4">
-          <Tab className="tab tab-bordered tab-active">Race cars</Tab>
-          <Tab className="tab tab-bordered">Fire trucks</Tab>
+          <Tab
+            className={`tab tab-bordered ${tabIndex == 0 ? "tab-active" : ""}`}>
+            Race cars
+          </Tab>
+          <Tab
+            className={`tab tab-bordered ${tabIndex == 1 ? "tab-active" : ""}`}>
+            Fire trucks
+          </Tab>
         </TabList>
+
+        {/* tabPanel shows the data inside each panel */}
         <TabPanel>
-          <h2>i am title 1.</h2>
+          {sportsCar.map((car) => (
+            <CategoryCars key={car.id} car={car}></CategoryCars>
+          ))}
         </TabPanel>
         <TabPanel>
-          <h2>I am title 2.</h2>
+          {truck.map((car) => (
+            <CategoryCars key={car.id} car={car}></CategoryCars>
+          ))}
         </TabPanel>
       </Tabs>
     </div>
