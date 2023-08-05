@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-const LogIn = () => {
+const Register = () => {
   return (
     <div className="hero min-h-screen bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300">
       <div className="hero-content flex-col lg:flex-row">
         <div className="text-center w-1/2 lg:text-left">
-          <h1 className="text-5xl font-bold">Login now!</h1>
+          <h1 className="text-5xl font-bold">Register now!</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
@@ -41,39 +41,23 @@ const LogIn = () => {
                   required
                   className="input input-bordered bg-inherit"
                 />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
               </div>
               <div className="form-control mt-6">
                 {/* submit */}
                 <input
                   type="submit"
-                  value="Login"
+                  value="Register"
                   className="btn btn-info text-white"
                 />
               </div>
               <div className="flex flex-col w-full border-opacity-50">
                 <div className="text-center mt-3">
                   <p>
-                    New to Toy Emporium ?
-                    <Link
-                      to="/register"
-                      className="text-rose-700 font-semibold ml-1">
-                      Register
+                    Already Have an Account ?
+                    <Link className="text-rose-700 font-semibold ml-1">
+                      Login
                     </Link>
                   </p>
-                </div>
-                <div className="divider">OR</div>
-                <div className="btn btn-outline btn-neutral rounded-box place-items-center ">
-                  <img
-                    className="w-7"
-                    src="https://www.vectorlogo.zone/logos/google/google-icon.svg"
-                    alt=""
-                  />
-                  <span>Continue With</span>
                 </div>
               </div>
             </form>
@@ -84,4 +68,4 @@ const LogIn = () => {
   );
 };
 
-export default LogIn;
+export default Register;
