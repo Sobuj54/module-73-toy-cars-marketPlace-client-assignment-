@@ -19,7 +19,7 @@ const NavBar = () => {
         <Link className="font-semibold hover:text-white">Add a Toy</Link>
       </li>
       <li className="hover:bg-fuchsia-500 rounded-lg">
-        <Link className="font-semibold hover:text-white">Blogs</Link>
+        <Link className="font-semibold hover: text-white">Blogs</Link>
       </li>
     </>
   );
@@ -50,7 +50,7 @@ const NavBar = () => {
           </ul>
         </div>
 
-        <div className="w-[70px] md:w-[120px] md:h-[120px]">
+        <div className="w-[70px] md:w-[80px]  md:h-[70px]">
           <img src={logo} />
         </div>
         <h2 className="normal-case md:text-4xl text-sky-500 font-bold">
