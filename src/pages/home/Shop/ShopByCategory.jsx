@@ -21,7 +21,7 @@ const ShopByCategory = () => {
   const policeCar = allCars.filter((cars) => cars.category === "Police Car");
 
   return (
-    <div className="bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 lg:pt-28 px-5">
+    <div className="bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 lg:py-28 px-5">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold">Toy Category</h2>
         <p className="text-lg mt-2">
@@ -39,7 +39,7 @@ const ShopByCategory = () => {
           </Tab>
           <Tab
             className={`tab tab-bordered ${tabIndex == 1 ? "tab-active" : ""}`}>
-            Truck
+            Regular Truck
           </Tab>
           <Tab
             className={`tab tab-bordered ${tabIndex == 2 ? "tab-active" : ""}`}>
