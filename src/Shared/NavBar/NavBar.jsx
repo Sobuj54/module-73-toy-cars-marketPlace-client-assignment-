@@ -5,21 +5,21 @@ const NavBar = () => {
   const list = (
     <>
       <li className="hover:bg-green-500 rounded-lg">
-        <Link to="/" className="hover:text-white">
+        <Link to="/" className="font-semibold hover:text-white">
           Home
         </Link>
       </li>
       <li className="hover:bg-amber-500 rounded-lg">
-        <Link className="hover:text-white">All Toys</Link>
+        <Link className="font-semibold hover:text-white">All Toys</Link>
       </li>
       <li className="hover:bg-lime-500 rounded-lg">
-        <Link className="hover:text-white">My Toys</Link>
+        <Link className="font-semibold hover:text-white">My Toys</Link>
       </li>
       <li className="hover:bg-teal-500 rounded-lg">
-        <Link className="hover:text-white">Add a toy</Link>
+        <Link className="font-semibold hover:text-white">Add a Toy</Link>
       </li>
       <li className="hover:bg-fuchsia-500 rounded-lg">
-        <Link className="hover:text-white">Blogs</Link>
+        <Link className="font-semibold hover:text-white">Blogs</Link>
       </li>
     </>
   );
@@ -61,10 +61,12 @@ const NavBar = () => {
         <ul className="menu menu-horizontal px-1">{list}</ul>
       </div>
       <div className="navbar-end">
-        <img
-          className="w-2/12 rounded-full"
-          src="https://images.pexels.com/photos/39853/woman-girl-freedom-happy-39853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        />
+        <label className="btn btn-circle avatar">
+          <img
+            className="w-12 rounded-full"
+            src="https://images.pexels.com/photos/39853/woman-girl-freedom-happy-39853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          />
+        </label>
       </div>
     </div>
   );
