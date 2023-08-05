@@ -1,9 +1,9 @@
 const Gallery = () => {
   return (
     <div className="bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 px-5 py-2 lg:px-auto pt-10 lg:pt-14 ">
-      <div className="text-center mb-14">
-        <h2 className="text-4xl font-bold">Our Toy Gallery</h2>
-        <p className="text-xl mt-2">Few Toy Images From Our Toys.</p>
+      <div className="text-center mb-8 lg:mb-14">
+        <h2 className="text-2xl md:text-4xl font-bold">Our Toy Gallery</h2>
+        <p className=" mt-2">Few Toy Images From Our Toys.</p>
       </div>
       <div className="-m-1 flex flex-wrap md:-m-2 w-full">
         <div className="flex w-1/2 flex-wrap">

@@ -21,10 +21,10 @@ const ShopByCategory = () => {
   const policeCar = allCars.filter((cars) => cars.category === "Police Car");
 
   return (
-    <div className="bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 lg:py-28 px-5">
-      <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold">Toy Category</h2>
-        <p className="text-lg mt-2">
+    <div className="bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 py-12 lg:py-28 px-5">
+      <div className="text-center mb-5">
+        <h2 className="text-2xl md:text-4xl font-bold">Toy Category</h2>
+        <p className=" mt-2">
           Choose your favorite toy according to category..
         </p>
       </div>
@@ -32,7 +32,7 @@ const ShopByCategory = () => {
       {/* this tab will hold entire tab section */}
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         {/* tablist created tab title */}
-        <TabList className="flex justify-center w-full  mx-auto gap-4 mb-7">
+        <TabList className="lg:flex justify-center w-full  mx-auto space-x-4 mb-7">
           <Tab
             className={`tab tab-bordered ${tabIndex == 0 ? "tab-active" : ""}`}>
             Sports car
@@ -56,31 +56,31 @@ const ShopByCategory = () => {
         </TabList>
 
         {/* tabPanel shows the data inside each panel */}
-        <TabPanel>
+        <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {sportsCar.map((car) => (
             <CategoryCars key={car.id} car={car}></CategoryCars>
           ))}
         </TabPanel>
         {/* truck panel */}
-        <TabPanel>
+        <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {truck.map((car) => (
             <CategoryCars key={car.id} car={car}></CategoryCars>
           ))}
         </TabPanel>
         {/* regular car panel */}
-        <TabPanel>
+        <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {cars.map((car) => (
             <CategoryCars key={car.id} car={car}></CategoryCars>
           ))}
         </TabPanel>
         {/* firetruck panel */}
-        <TabPanel>
+        <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {fireTruck.map((car) => (
             <CategoryCars key={car.id} car={car}></CategoryCars>
           ))}
         </TabPanel>
         {/* police car panel */}
-        <TabPanel>
+        <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {policeCar.map((car) => (
             <CategoryCars key={car.id} car={car}></CategoryCars>
           ))}
