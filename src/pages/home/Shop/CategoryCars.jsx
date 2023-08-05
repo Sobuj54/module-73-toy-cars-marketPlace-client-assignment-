@@ -1,16 +1,31 @@
+import { Rating, Star } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
+
+const myStyles = {
+  itemShapes: Star,
+  activeFillColor: "#ffb700",
+  inactiveFillColor: "#fbf1a9",
+};
+
 const CategoryCars = ({ car }) => {
   const { name, picture, price, rating } = car;
+
   return (
     <div className="card card-compact w-full  bg-inherit shadow-2xl shadow-stone-950">
       <figure>
         <img src={picture} alt="Shoes" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{name}</h2>
-        <p>{price}</p>
-        <p>{rating}</p>
+        <h2 className="card-title font-bold text-2xl">{name}</h2>
+        <p className="text-lg font-semibold">Price : {"$ " + price} k</p>
+        <Rating
+          readOnly
+          style={{ maxWidth: 120 }}
+          value={rating}
+          itemStyles={myStyles}
+        />
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+          <button className="btn btn-primary">View Details</button>
         </div>
       </div>
     </div>
