@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo/vecteezy_car-toys-kid-logo_.jpg";
 
 const NavBar = () => {
   const list = (
@@ -53,8 +52,8 @@ const NavBar = () => {
         {/* <div className="w-[70px] md:w-[80px]  md:h-[70px] ">
           <img src={logo} />
         </div> */}
-        <h2 className="normal-case text-xl md:text-4xl text-lime-600 font-bold font-serif">
-          Car Toys
+        <h2 className="normal-case text-xl md:text-4xl text-black font-bold font-serif">
+          Toy Emporium
         </h2>
       </div>
       <div className="navbar-center hidden lg:flex">

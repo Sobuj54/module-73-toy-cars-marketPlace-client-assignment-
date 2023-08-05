@@ -13,7 +13,7 @@ const Banner = () => {
           <p className="py-6 font-serif">
             Bring Joy and Wonder To Your Child's Playtime
           </p>
-          <button className="btn btn-accent text-white font-bold">
+          <button className="btn bg-emerald-600 text-white font-bold">
             Shop Now
           </button>
         </div>
