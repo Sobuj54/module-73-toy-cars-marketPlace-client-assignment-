@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero md:min-h-screen bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <img
           src="https://images.pexels.com/photos/981570/pexels-photo-981570.jpeg?auto=compress&cs=tinysrgb&w=600"

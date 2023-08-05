@@ -19,13 +19,13 @@ const NavBar = () => {
         <Link className="font-semibold hover:text-white">Add a Toy</Link>
       </li>
       <li className="hover:bg-fuchsia-500 rounded-lg">
-        <Link className="font-semibold hover: text-white">Blogs</Link>
+        <Link className="font-semibold hover:text-white">Blogs</Link>
       </li>
     </>
   );
 
   return (
-    <div className="navbar bg-base-100 ">
+    <div className="navbar bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300">
       <div className="navbar-start ">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -50,10 +50,10 @@ const NavBar = () => {
           </ul>
         </div>
 
-        <div className="w-[70px] md:w-[80px]  md:h-[70px]">
+        {/* <div className="w-[70px] md:w-[80px]  md:h-[70px] ">
           <img src={logo} />
-        </div>
-        <h2 className="normal-case md:text-4xl text-sky-500 font-bold">
+        </div> */}
+        <h2 className="normal-case text-xl md:text-4xl text-lime-600 font-bold font-serif">
           Car Toys
         </h2>
       </div>
