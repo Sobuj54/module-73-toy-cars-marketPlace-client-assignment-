@@ -24,7 +24,7 @@ const NavBar = () => {
   );
 
   return (
-    <div className="navbar bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300">
+    <div className="navbar bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 lg:px-10">
       <div className="navbar-start ">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -59,7 +59,7 @@ const NavBar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{list}</ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end w-5/12">
         <label className="btn btn-circle avatar">
           <img
             className="w-12 rounded-full"

@@ -7,7 +7,7 @@ const Banner = () => {
           className="w-full rounded-lg shadow-2xl"
         />
         <div>
-          <h1 className="text-5xl font-bold font-serif">
+          <h1 className="text-2xl md:text-5xl font-bold font-serif">
             Discover a Word of Imagination and Adventure With Our Toys
           </h1>
           <p className="py-6 font-serif">

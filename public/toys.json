@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "category": "Sports Car",
+      "name": "Racer 10",
+      "picture": "https://images.pexels.com/photos/92615/pexels-photo-92615.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "price": 29.99,
+      "rating": 4.6
+    },
+    {
+      "id": 2,
+      "category": "Truck",
+      "name": "Wall-E",
+      "picture": "https://images.pexels.com/photos/981588/pexels-photo-981588.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "price": 34.99,
+      "rating": 4.7
+    },
+    {
+      "id": 3,
+      "category": "Regular Car",
+      "name": "Little Guy",
+      "picture": "https://images.pexels.com/photos/35967/mini-cooper-auto-model-vehicle.jpg?auto=compress&cs=tinysrgb&w=600",
+      "price": 19.99,
+      "rating": 4.3
+    },
+    {
+      "id": 4,
+      "category": "Fire Truck",
+      "name": "Mini Fire Truck",
+      "picture": "https://media.istockphoto.com/id/1341284975/photo/toy-fire-truck.jpg?b=1&s=612x612&w=0&k=20&c=1oPZnf5kc914DXFnKKKYAWns2vvhk6Voo-wi6YOygCg=",
+      "price": 14.99,
+      "rating": 4.5
+    },
+    {
+      "id": 5,
+      "category": "Police Car",
+      "name": "Mini Police Car",
+      "picture": "https://media.istockphoto.com/id/1126460118/photo/metal-toy-car-police.jpg?b=1&s=612x612&w=0&k=20&c=VUODCGJAFYgI697CrXc3uIJatCgPQ1fWpuTtPPVokYw=",
+      "price": 16.99,
+      "rating": 4.4
+    }
+  ]
+  

@@ -1,6 +1,6 @@
 const Gallery = () => {
   return (
-    <div class="bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 px-5 py-2 lg:px-auto lg:pt-14 ">
+    <div class="bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 px-5 py-2 lg:px-auto pt-10 lg:pt-14 ">
       <div className="text-center mb-14">
         <h2 className="text-4xl font-bold">Our Toy Gallery</h2>
         <p className="text-xl mt-2">Few Toy Images From Our Toys.</p>
