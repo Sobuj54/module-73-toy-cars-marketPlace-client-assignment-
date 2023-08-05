@@ -56,31 +56,31 @@ const ShopByCategory = () => {
         </TabList>
 
         {/* tabPanel shows the data inside each panel */}
-        <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sportsCar.map((car) => (
             <CategoryCars key={car.id} car={car}></CategoryCars>
           ))}
         </TabPanel>
         {/* truck panel */}
-        <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {truck.map((car) => (
             <CategoryCars key={car.id} car={car}></CategoryCars>
           ))}
         </TabPanel>
         {/* regular car panel */}
-        <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cars.map((car) => (
             <CategoryCars key={car.id} car={car}></CategoryCars>
           ))}
         </TabPanel>
         {/* firetruck panel */}
-        <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {fireTruck.map((car) => (
             <CategoryCars key={car.id} car={car}></CategoryCars>
           ))}
         </TabPanel>
         {/* police car panel */}
-        <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {policeCar.map((car) => (
             <CategoryCars key={car.id} car={car}></CategoryCars>
           ))}
