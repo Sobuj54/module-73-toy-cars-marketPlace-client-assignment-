@@ -1,5 +1,6 @@
 import { Rating, Star } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
+import { Link } from "react-router-dom";
 
 const myStyles = {
   itemShapes: Star,
@@ -25,7 +26,9 @@ const CategoryCars = ({ car }) => {
           itemStyles={myStyles}
         />
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">View Details</button>
+          <Link to="/login">
+            <button className="btn btn-primary">View Details</button>
+          </Link>
         </div>
       </div>
     </div>
