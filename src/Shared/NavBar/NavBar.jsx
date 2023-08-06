@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../ContextApi/ContextApi";
 
 const NavBar = () => {
+  const { user } = useContext(AuthContext);
+
   const list = (
     <>
       <li className="hover:bg-green-500 rounded-lg">
@@ -60,12 +64,18 @@ const NavBar = () => {
         <ul className="menu menu-horizontal px-1">{list}</ul>
       </div>
       <div className="navbar-end w-5/12">
-        <label className="btn btn-circle avatar">
-          <img
-            className="w-12 rounded-full"
-            src="https://images.pexels.com/photos/39853/woman-girl-freedom-happy-39853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          />
-        </label>
+        {user ? (
+          <>
+            <label className="btn btn-circle avatar">
+              <img className="w-12 rounded-full" src={user.photoURL} />
+            </label>
+            <button className="btn shadow-2xl shadow-black bg-inherit ml-2 ">
+              Logout
+            </button>
+          </>
+        ) : (
+          <button className="btn btn-primary">Login</button>
+        )}
       </div>
     </div>
   );

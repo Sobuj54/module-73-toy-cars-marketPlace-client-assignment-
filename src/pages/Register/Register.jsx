@@ -31,7 +31,7 @@ const Register = () => {
   };
 
   return (
-    <div className="hero min-h-screen bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300">
+    <div className="hero min-h-screen bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 py-10">
       <div className="hero-content flex-col lg:flex-row">
         <div className="text-center md:w-1/2 lg:text-left">
           <h1 className="text-4xl md:text-5xl font-bold">Register now!</h1>

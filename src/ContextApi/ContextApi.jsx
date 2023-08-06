@@ -1,8 +1,9 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import app from "../Firebase/firebase.config";
 import {
   createUserWithEmailAndPassword,
   getAuth,
+  onAuthStateChanged,
   updateProfile,
 } from "firebase/auth";
 
@@ -24,6 +25,17 @@ const ContextApi = ({ children }) => {
       photoURL: photo,
     });
   };
+
+  useEffect(() => {
+    const unSubscribe = onAuthStateChanged(auth, (loggedUser) => {
+      setLoading(false);
+      setUser(loggedUser);
+      console.log(loggedUser);
+    });
+    return () => {
+      return unSubscribe();
+    };
+  }, []);
 
   const userInfo = {
     user,
