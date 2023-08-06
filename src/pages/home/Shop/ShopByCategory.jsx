@@ -7,7 +7,7 @@ const ShopByCategory = () => {
   const [allCars, setAllCars] = useState([]);
 
   useEffect(() => {
-    fetch("toys.json")
+    fetch("https://toy-cars-market-place-server.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => {
         setAllCars(data);
@@ -58,31 +58,31 @@ const ShopByCategory = () => {
         {/* tabPanel shows the data inside each panel */}
         <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sportsCar.map((car) => (
-            <CategoryCars key={car.id} car={car}></CategoryCars>
+            <CategoryCars key={car._id} car={car}></CategoryCars>
           ))}
         </TabPanel>
         {/* truck panel */}
         <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {truck.map((car) => (
-            <CategoryCars key={car.id} car={car}></CategoryCars>
+            <CategoryCars key={car._id} car={car}></CategoryCars>
           ))}
         </TabPanel>
         {/* regular car panel */}
         <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cars.map((car) => (
-            <CategoryCars key={car.id} car={car}></CategoryCars>
+            <CategoryCars key={car._id} car={car}></CategoryCars>
           ))}
         </TabPanel>
         {/* firetruck panel */}
         <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {fireTruck.map((car) => (
-            <CategoryCars key={car.id} car={car}></CategoryCars>
+            <CategoryCars key={car._id} car={car}></CategoryCars>
           ))}
         </TabPanel>
         {/* police car panel */}
         <TabPanel className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {policeCar.map((car) => (
-            <CategoryCars key={car.id} car={car}></CategoryCars>
+            <CategoryCars key={car._id} car={car}></CategoryCars>
           ))}
         </TabPanel>
       </Tabs>

@@ -24,12 +24,16 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: "viewDetails",
+        path: "viewDetails/:id",
         element: (
           <PrivateRoute>
             <ViewDetails></ViewDetails>
           </PrivateRoute>
         ),
+        loader: ({ params }) =>
+          fetch(
+            `https://toy-cars-market-place-server.vercel.app/toys/${params.id}`
+          ),
       },
     ],
   },

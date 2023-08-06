@@ -9,7 +9,7 @@ const myStyles = {
 };
 
 const CategoryCars = ({ car }) => {
-  const { name, picture, price, rating } = car;
+  const { _id, name, picture, price, rating } = car;
 
   return (
     <div className="card card-compact w-full  bg-inherit shadow-2xl shadow-stone-950">
@@ -26,7 +26,7 @@ const CategoryCars = ({ car }) => {
           itemStyles={myStyles}
         />
         <div className="card-actions justify-end">
-          <Link to="/viewDetails">
+          <Link to={`/viewDetails/${_id}`}>
             <button className="btn btn-primary">View Details</button>
           </Link>
         </div>
