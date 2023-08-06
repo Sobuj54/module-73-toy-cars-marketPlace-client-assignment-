@@ -4,6 +4,7 @@ import {
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
+  signInWithEmailAndPassword,
   signOut,
   updateProfile,
 } from "firebase/auth";
@@ -27,6 +28,11 @@ const ContextApi = ({ children }) => {
     });
   };
 
+  const logIn = (email, password) => {
+    setLoading(true);
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (loggedUser) => {
       setLoading(false);
@@ -48,6 +54,7 @@ const ContextApi = ({ children }) => {
     register,
     updateUserProfile,
     logOut,
+    logIn,
   };
 
   return (

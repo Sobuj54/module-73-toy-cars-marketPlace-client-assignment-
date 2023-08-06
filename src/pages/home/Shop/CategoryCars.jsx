@@ -26,7 +26,7 @@ const CategoryCars = ({ car }) => {
           itemStyles={myStyles}
         />
         <div className="card-actions justify-end">
-          <Link to="/login">
+          <Link to="/viewDetails">
             <button className="btn btn-primary">View Details</button>
           </Link>
         </div>
