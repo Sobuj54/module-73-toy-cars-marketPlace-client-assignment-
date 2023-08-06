@@ -4,8 +4,8 @@ const Register = () => {
   return (
     <div className="hero min-h-screen bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300">
       <div className="hero-content flex-col lg:flex-row">
-        <div className="text-center w-1/2 lg:text-left">
-          <h1 className="text-5xl font-bold">Register now!</h1>
+        <div className="text-center md:w-1/2 lg:text-left">
+          <h1 className="text-4xl md:text-5xl font-bold">Register now!</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
@@ -16,6 +16,19 @@ const Register = () => {
           <div className="card-body">
             {/* login form */}
             <form>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Name</span>
+                </label>
+                {/* email input field */}
+                <input
+                  type="text"
+                  placeholder="Name"
+                  name="name"
+                  required
+                  className="input input-bordered bg-inherit"
+                />
+              </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -42,6 +55,19 @@ const Register = () => {
                   className="input input-bordered bg-inherit"
                 />
               </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Photo</span>
+                </label>
+                {/* password input field */}
+                <input
+                  type="text"
+                  placeholder="Photo URL"
+                  name="photo"
+                  required
+                  className="input input-bordered bg-inherit"
+                />
+              </div>
               <div className="form-control mt-6">
                 {/* submit */}
                 <input
@@ -54,7 +80,9 @@ const Register = () => {
                 <div className="text-center mt-3">
                   <p>
                     Already Have an Account ?
-                    <Link className="text-rose-700 font-semibold ml-1">
+                    <Link
+                      to="/login"
+                      className="text-rose-700 font-semibold ml-1">
                       Login
                     </Link>
                   </p>
