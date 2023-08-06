@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../ContextApi/ContextApi";
 
 const Register = () => {
-  const { register } = useContext(AuthContext);
+  const { register, updateUserProfile } = useContext(AuthContext);
 
   const handleRegister = (event) => {
     event.preventDefault();
@@ -14,11 +14,15 @@ const Register = () => {
     const password = form.password.value;
     const photo = form.photo.value;
 
-    const newUser = { name, email, password, photo };
-
     register(email, password)
       .then((result) => {
         const user = result.user;
+        // set user name and photo
+        updateUserProfile(name, photo)
+          .then(() => {
+            console.log("profile has been updated");
+          })
+          .catch((error) => console.log(error));
         console.log(user);
       })
       .catch((error) => {
