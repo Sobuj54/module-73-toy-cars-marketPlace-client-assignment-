@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../ContextApi/ContextApi";
 
 const NavBar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
 
   const list = (
     <>
@@ -26,6 +26,14 @@ const NavBar = () => {
       </li>
     </>
   );
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        console.log("sign out successful");
+      })
+      .catch((error) => console.log(error));
+  };
 
   return (
     <div className="navbar bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 lg:px-10">
@@ -69,7 +77,9 @@ const NavBar = () => {
             <label className="btn btn-circle avatar">
               <img className="w-12 rounded-full" src={user.photoURL} />
             </label>
-            <button className="btn shadow-2xl shadow-black bg-inherit ml-2 ">
+            <button
+              onClick={handleLogOut}
+              className="btn shadow-2xl shadow-black bg-inherit ml-2 ">
               Logout
             </button>
           </>

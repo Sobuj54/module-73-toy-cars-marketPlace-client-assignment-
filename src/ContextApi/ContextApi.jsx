@@ -4,6 +4,7 @@ import {
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
+  signOut,
   updateProfile,
 } from "firebase/auth";
 
@@ -37,11 +38,16 @@ const ContextApi = ({ children }) => {
     };
   }, []);
 
+  const logOut = () => {
+    return signOut(auth);
+  };
+
   const userInfo = {
     user,
     loading,
     register,
     updateUserProfile,
+    logOut,
   };
 
   return (
