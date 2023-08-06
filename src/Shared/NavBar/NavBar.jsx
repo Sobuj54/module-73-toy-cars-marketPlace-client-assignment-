@@ -74,9 +74,10 @@ const NavBar = () => {
       <div className="navbar-end w-5/12">
         {user ? (
           <>
+            {/* tool tip created */}
             <label
-              className="btn btn-circle avatar tooltip tooltip-bottom"
-              tool-tip="hi">
+              className="btn btn-circle avatar tooltip tooltip-bottom "
+              data-tip={user.displayName}>
               <img className="w-12 rounded-full" src={user.photoURL} />
             </label>
             <button

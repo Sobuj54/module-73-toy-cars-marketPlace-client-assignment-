@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../ContextApi/ContextApi";
 
 const LogIn = () => {
-  const { logIn } = useContext(AuthContext);
+  const { logIn, googleLogIn } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -21,6 +21,15 @@ const LogIn = () => {
         const user = result.user;
         // console.log(user);
         navigate(from, { replace: true });
+      })
+      .catch((error) => console.log(error));
+  };
+
+  const handleGoogleLogIn = () => {
+    googleLogIn()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
       })
       .catch((error) => console.log(error));
   };
@@ -91,7 +100,9 @@ const LogIn = () => {
                   </p>
                 </div>
                 <div className="divider">OR</div>
-                <div className="btn btn-outline btn-neutral rounded-box place-items-center ">
+                <div
+                  onClick={handleGoogleLogIn}
+                  className="btn btn-outline btn-neutral rounded-box place-items-center ">
                   <img
                     className="w-7"
                     src="https://www.vectorlogo.zone/logos/google/google-icon.svg"
