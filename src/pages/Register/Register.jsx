@@ -1,6 +1,31 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../ContextApi/ContextApi";
 
 const Register = () => {
+  const { register } = useContext(AuthContext);
+
+  const handleRegister = (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    const photo = form.photo.value;
+
+    const newUser = { name, email, password, photo };
+
+    register(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div className="hero min-h-screen bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300">
       <div className="hero-content flex-col lg:flex-row">
@@ -15,7 +40,7 @@ const Register = () => {
         <div className="card w-full max-w-md shadow-2xl shadow-slate-900 bg-gradient-to-r from-indigo-200 via-purple-200 to-slate-200">
           <div className="card-body">
             {/* login form */}
-            <form>
+            <form onSubmit={handleRegister}>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
