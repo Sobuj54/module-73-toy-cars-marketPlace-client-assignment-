@@ -6,8 +6,8 @@ const Blogs = () => {
         <h3 className="text-2xl font-semibold mb-2">
           What is an access token and refresh token ?
         </h3>
-        <p className="space-y-3 text-lg">
-          <article>
+        <article className="space-y-3 text-lg">
+          <p>
             <span className="font-semibold text-lg">Access Token :</span>
             <li>
               An access token is a string representing an authorization issued
@@ -15,8 +15,8 @@ const Blogs = () => {
               access, granted by the resource owner, and enforced by the
               resource server and authorization server.
             </li>
-          </article>
-          <article>
+          </p>
+          <p>
             <span className="font-semibold text-lg">Refresh Token :</span>
             <li>
               A refresh token is issued (along with access token) to the client
@@ -24,16 +24,16 @@ const Blogs = () => {
               is to request for a new access token when the existing access
               token is expired.
             </li>
-          </article>
-        </p>
+          </p>
+        </article>
       </section>
       {/* 2 */}
       <section className="mt-10">
         <h3 className="text-2xl font-semibold mb-2">
           How do they work and where should we store them on client side ?
         </h3>
-        <p className="space-y-4 text-lg">
-          <article>
+        <article className="space-y-4 text-lg">
+          <p>
             <span className="font-semibold text-lg">Access Token :</span>
             <li>
               An access token is put in the Authorization header of our request
@@ -58,8 +58,8 @@ const Blogs = () => {
               store access token in httpOnly cookie (although it is not
               completely safe).
             </li>
-          </article>
-          <article>
+          </p>
+          <p>
             <span className="font-semibold text-lg">Refresh Token :</span>
             <li>
               The responsibility of refresh token is to request for a new access
@@ -81,8 +81,8 @@ const Blogs = () => {
             <li>
               Refresh tokens are usually stored securely on the server side
             </li>
-          </article>
-        </p>
+          </p>
+        </article>
       </section>
       {/* 3 */}
       <section className="mt-10">

@@ -19,7 +19,9 @@ const NavBar = () => {
       </li>
 
       <li className="hover:bg-lime-500 rounded-lg">
-        <Link className="font-semibold hover:text-white">My Toys</Link>
+        <Link to="/myToys" className="font-semibold hover:text-white">
+          My Toys
+        </Link>
       </li>
       <li className="hover:bg-teal-500 rounded-lg">
         <Link to="/addAToy" className="font-semibold hover:text-white">
