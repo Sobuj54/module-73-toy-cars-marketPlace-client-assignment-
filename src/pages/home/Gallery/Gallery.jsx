@@ -6,7 +6,7 @@ const Gallery = () => {
         <p className=" mt-2">Few Toy Images From Our Toys.</p>
       </div>
       <div className=" flex flex-wrap  w-full">
-        <div className="flex w-1/2 flex-wrap">
+        <div className="flex w-full lg:w-1/2 flex-wrap">
           <div className="w-1/2 p-1 md:p-2">
             <img
               alt="gallery"
@@ -29,7 +29,7 @@ const Gallery = () => {
             />
           </div>
         </div>
-        <div className="flex w-1/2 flex-wrap">
+        <div className="flex w-full lg:w-1/2 flex-wrap">
           <div className="w-full p-1 md:p-2">
             <img
               alt="gallery"
