@@ -1,11 +1,55 @@
 import { useContext } from "react";
 import { AuthContext } from "../../ContextApi/ContextApi";
+import Swal from "sweetalert2";
 
 const AddAToy = () => {
   const { user } = useContext(AuthContext);
 
   const handleAddAToy = (event) => {
     event.preventDefault();
+
+    const form = event.target;
+    const seller = form.seller.value;
+    const email = form.email.value;
+    const toy = form.toy.value;
+    const subCategory = form.subCategory.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
+    const quantity = form.quantity.value;
+    const photo = form.photo.value;
+    const description = form.description.value;
+
+    const newToy = {
+      seller,
+      email,
+      toy,
+      subCategory,
+      price,
+      rating,
+      quantity,
+      photo,
+      description,
+    };
+
+    fetch("http://localhost:5000/addedToys", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newToy),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "New Toy Has Been Successfully Added",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      });
   };
 
   return (
@@ -53,7 +97,7 @@ const AddAToy = () => {
             <input
               type="text"
               placeholder="Toy Name"
-              name="Toy"
+              name="toy"
               className="input input-bordered w-full"
             />
           </div>
@@ -113,7 +157,7 @@ const AddAToy = () => {
             </label>
             <input
               type="url"
-              placeholder="Photo URL"
+              placeholder="Photo URL of Toy"
               name="photo"
               className="input input-bordered w-full"
             />
@@ -126,7 +170,7 @@ const AddAToy = () => {
           <input
             type="text"
             name="description"
-            placeholder="Description"
+            placeholder="detailed Description"
             className="input input-bordered w-full h-20"
           />
         </div>
