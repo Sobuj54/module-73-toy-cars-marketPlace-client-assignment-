@@ -15,16 +15,16 @@ const NavBar = () => {
       <li className="hover:bg-amber-500 rounded-lg">
         <Link className="font-semibold hover:text-white">All Toys</Link>
       </li>
-      {user && (
-        <>
-          <li className="hover:bg-lime-500 rounded-lg">
-            <Link className="font-semibold hover:text-white">My Toys</Link>
-          </li>
-          <li className="hover:bg-teal-500 rounded-lg">
-            <Link className="font-semibold hover:text-white">Add a Toy</Link>
-          </li>
-        </>
-      )}
+
+      <li className="hover:bg-lime-500 rounded-lg">
+        <Link className="font-semibold hover:text-white">My Toys</Link>
+      </li>
+      <li className="hover:bg-teal-500 rounded-lg">
+        <Link to="/addAToy" className="font-semibold hover:text-white">
+          Add a Toy
+        </Link>
+      </li>
+
       <li className="hover:bg-fuchsia-500 rounded-lg">
         <Link to="/blogs" className="font-semibold hover:text-white">
           Blogs
