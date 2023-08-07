@@ -19,6 +19,7 @@ const CategoryCars = ({ car }) => {
       <div className="card-body">
         <h2 className="card-title font-bold text-2xl">{name}</h2>
         <p className="text-lg font-semibold">Price : {"$ " + price} k</p>
+        {/* react rating */}
         <Rating
           readOnly
           style={{ maxWidth: 120 }}

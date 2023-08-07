@@ -13,7 +13,9 @@ const NavBar = () => {
         </Link>
       </li>
       <li className="hover:bg-amber-500 rounded-lg">
-        <Link className="font-semibold hover:text-white">All Toys</Link>
+        <Link to="/allToys" className="font-semibold hover:text-white">
+          All Toys
+        </Link>
       </li>
 
       <li className="hover:bg-lime-500 rounded-lg">
@@ -42,7 +44,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="navbar bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 lg:px-10">
+    <div className="navbar bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300  lg:px-10">
       <div className="navbar-start ">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -62,7 +64,7 @@ const NavBar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            className="menu menu-sm dropdown-content mt-3 z-[1] y-[-1] p-2 shadow bg-base-100 rounded-box w-52">
             {list}
           </ul>
         </div>

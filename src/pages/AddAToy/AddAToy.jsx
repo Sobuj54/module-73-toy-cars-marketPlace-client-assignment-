@@ -46,8 +46,9 @@ const AddAToy = () => {
             icon: "success",
             title: "New Toy Has Been Successfully Added",
             showConfirmButton: false,
-            timer: 1500,
+            timer: 2000,
           });
+          form.reset();
         }
       });
   };
@@ -72,6 +73,7 @@ const AddAToy = () => {
               placeholder="Seller Name"
               defaultValue={user.displayName}
               name="seller"
+              required
               className="input input-bordered w-full"
             />
           </div>
@@ -84,6 +86,7 @@ const AddAToy = () => {
               placeholder="Seller Email"
               defaultValue={user.email}
               name="email"
+              required
               className="input input-bordered w-full"
             />
           </div>
@@ -98,6 +101,7 @@ const AddAToy = () => {
               type="text"
               placeholder="Toy Name"
               name="toy"
+              required
               className="input input-bordered w-full"
             />
           </div>
@@ -109,6 +113,7 @@ const AddAToy = () => {
               type="text"
               placeholder="Toy Sub Category"
               name="subCategory"
+              required
               className="input input-bordered w-full"
             />
           </div>
@@ -123,6 +128,7 @@ const AddAToy = () => {
               type="text"
               placeholder="Toy Price"
               name="price"
+              required
               className="input input-bordered w-full"
             />
           </div>
@@ -134,6 +140,7 @@ const AddAToy = () => {
               type="text"
               placeholder="Toy Rating"
               name="rating"
+              required
               className="input input-bordered w-full"
             />
           </div>
@@ -148,6 +155,7 @@ const AddAToy = () => {
               type="text"
               placeholder="Available Quantity"
               name="quantity"
+              required
               className="input input-bordered w-full"
             />
           </div>
@@ -159,6 +167,7 @@ const AddAToy = () => {
               type="url"
               placeholder="Photo URL of Toy"
               name="photo"
+              required
               className="input input-bordered w-full"
             />
           </div>
@@ -170,6 +179,7 @@ const AddAToy = () => {
           <input
             type="text"
             name="description"
+            required
             placeholder="detailed Description"
             className="input input-bordered w-full h-20"
           />

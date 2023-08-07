@@ -23,6 +23,7 @@ const Register = () => {
             console.log("profile has been updated");
           })
           .catch((error) => console.log(error));
+        form.reset();
         console.log(user);
       })
       .catch((error) => {
