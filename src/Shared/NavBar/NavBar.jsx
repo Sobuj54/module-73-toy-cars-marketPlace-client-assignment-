@@ -26,7 +26,9 @@ const NavBar = () => {
         </>
       )}
       <li className="hover:bg-fuchsia-500 rounded-lg">
-        <Link className="font-semibold hover:text-white">Blogs</Link>
+        <Link to="/blogs" className="font-semibold hover:text-white">
+          Blogs
+        </Link>
       </li>
     </>
   );

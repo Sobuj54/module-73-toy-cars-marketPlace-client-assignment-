@@ -14,7 +14,7 @@ const Footer = () => {
         </svg>
         <p className="font-bold">
           GREEN Industries Ltd. <br />
-          Providing reliable tech since 2023
+          Providing reliable toys since 2023
         </p>
         <p>Copyright © 2023 - All right reserved</p>
       </div>

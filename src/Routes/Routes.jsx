@@ -5,6 +5,7 @@ import LogIn from "../pages/Login/LogIn";
 import Register from "../pages/Register/Register";
 import ViewDetails from "../viewDetails/ViewDetails";
 import PrivateRoute from "./private/PrivateRoute";
+import Blogs from "../pages/Blogs/Blogs";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
           fetch(
             `https://toy-cars-market-place-server.vercel.app/toys/${params.id}`
           ),
+      },
+      {
+        path: "blogs",
+        element: <Blogs></Blogs>,
       },
     ],
   },
