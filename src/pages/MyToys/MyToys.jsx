@@ -43,7 +43,9 @@ const MyToys = () => {
             <MyToyTable
               key={loadedToy._id}
               loadedToy={loadedToy}
-              count={count++}></MyToyTable>
+              count={count++}
+              allToys={allToys}
+              setAllToys={setAllToys}></MyToyTable>
           ))}
         </tbody>
       </table>
