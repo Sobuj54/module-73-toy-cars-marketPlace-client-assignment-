@@ -1,5 +1,4 @@
-import { EmailAuthProvider } from "firebase/auth";
-import { Link } from "react-router-dom";
+import { FaPen, FaTrashAlt } from "react-icons/fa";
 
 const MyToyTable = ({ loadedToy, count }) => {
   const { _id, seller, toy, subCategory, price, quantity, email } = loadedToy;
@@ -15,9 +14,13 @@ const MyToyTable = ({ loadedToy, count }) => {
         <td>{quantity}</td>
         <td>{seller}</td>
         <td>{email}</td>
-        <td className=" w-2/12">
-          <Link className="btn btn-primary">Edit</Link>
-          <Link className="btn btn-primary">Delete</Link>
+        <td className=" w-2/12 space-x-2">
+          <button className="btn btn-success text-white">
+            <FaPen />
+          </button>
+          <button className="btn btn-error text-white">
+            <FaTrashAlt />
+          </button>
         </td>
       </tr>
     </>
