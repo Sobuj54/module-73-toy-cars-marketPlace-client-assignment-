@@ -1,4 +1,5 @@
 import { FaPen, FaTrashAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const MyToyTable = ({ loadedToy, count, allToys, setAllToys }) => {
@@ -10,7 +11,6 @@ const MyToyTable = ({ loadedToy, count, allToys, setAllToys }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.deletedCount === 1) {
           Swal.fire({
             title: "Are you sure?",
@@ -43,9 +43,9 @@ const MyToyTable = ({ loadedToy, count, allToys, setAllToys }) => {
         <td>{seller}</td>
         <td>{email}</td>
         <td className=" w-2/12 space-x-2">
-          <button className="btn btn-success text-white">
+          <Link to={`/update/${_id}`} className="btn btn-success text-white">
             <FaPen />
-          </button>
+          </Link>
           <button
             onClick={() => handleDelete(_id)}
             className="btn btn-error text-white">
