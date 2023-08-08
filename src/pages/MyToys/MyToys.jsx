@@ -4,18 +4,20 @@ import MyToyTable from "./MyToyTable";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
-  const [myToys, setMyToys] = useState([]);
+  const [allToys, setAllToys] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/addedToys/${user.email}`, {
+    fetch("http://localhost:5000/addedToys", {
       method: "GET",
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setMyToys(data);
+        setAllToys(data);
       });
   }, []);
+
+  const myToys = allToys.filter((toy) => toy.email === user.email);
 
   let count = 1;
 
