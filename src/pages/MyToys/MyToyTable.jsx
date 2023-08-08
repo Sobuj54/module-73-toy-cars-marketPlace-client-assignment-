@@ -45,13 +45,15 @@ const MyToyTable = ({ loadedToy, count, allToys, setAllToys }) => {
         <td>{quantity}</td>
         <td>{seller}</td>
         <td>{email}</td>
-        <td className=" w-2/12 space-x-2">
-          <Link to={`/update/${_id}`} className="btn btn-success text-white">
+        <td className="w-2/12 lg:space-x-2">
+          <Link
+            to={`/update/${_id}`}
+            className="btn btn-sm md:btn-md btn-success text-white">
             <FaPen />
           </Link>
           <button
             onClick={() => handleDelete(_id)}
-            className="btn btn-error text-white">
+            className="btn btn-sm md:btn-md btn-error text-white">
             <FaTrashAlt />
           </button>
         </td>

@@ -7,21 +7,21 @@ const Gallery = () => {
       </div>
       <div className=" flex flex-wrap  w-full">
         <div className="flex w-full lg:w-1/2 flex-wrap">
-          <div className="w-1/2 p-1 md:p-2">
+          <div className="w-1/2 p-1 md:p-2 transition duration-300 ease-in-out hover:scale-110">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
               src="https://images.pexels.com/photos/14823946/pexels-photo-14823946.jpeg?auto=compress&cs=tinysrgb&w=600"
             />
           </div>
-          <div className="w-1/2 p-1 md:p-2">
+          <div className="w-1/2 p-1 md:p-2 transition duration-300 ease-in-out hover:scale-110">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
               src="https://images.pexels.com/photos/16361066/pexels-photo-16361066/free-photo-of-wood-cars-traffic-nature.jpeg?auto=compress&cs=tinysrgb&w=600"
             />
           </div>
-          <div className="w-full p-1 md:p-2">
+          <div className="w-full p-1 md:p-2 transition duration-300 ease-in-out hover:scale-75">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
@@ -30,21 +30,21 @@ const Gallery = () => {
           </div>
         </div>
         <div className="flex w-full lg:w-1/2 flex-wrap">
-          <div className="w-full p-1 md:p-2">
+          <div className="w-full p-1 md:p-2 transition duration-300 ease-in-out hover:scale-75">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
               src="https://images.pexels.com/photos/385997/pexels-photo-385997.jpeg?auto=compress&cs=tinysrgb&w=600"
             />
           </div>
-          <div className="w-1/2 p-1 md:p-2">
+          <div className="w-1/2 p-1 md:p-2 transition duration-300 ease-in-out hover:scale-110">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"
               src="https://images.pexels.com/photos/35967/mini-cooper-auto-model-vehicle.jpg?auto=compress&cs=tinysrgb&w=600"
             />
           </div>
-          <div className="w-1/2 p-1 md:p-2">
+          <div className="w-1/2 p-1 md:p-2 transition duration-300 ease-in-out hover:scale-110">
             <img
               alt="gallery"
               className="block h-full w-full rounded-lg object-cover object-center"

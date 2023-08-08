@@ -19,14 +19,14 @@ const Details = () => {
         <div className="hero-content flex-col lg:flex-row gap-10">
           <img
             src={photo}
-            className="max-w-lg rounded-lg shadow-2xl shadow-zinc-800"
+            className="max-w-full rounded-lg shadow-2xl shadow-zinc-800"
           />
           <div>
-            <h1 className="text-5xl font-bold mb-5">{toy}</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-5">{toy}</h1>
             <p className="py-1 font-semibold">Seller : {seller}</p>
             <p className="py-1 font-semibold">Seller email : {email}</p>
             <p className="py-1 font-semibold">Price : {"$ " + price}</p>
-            <p className="py-1 font-semibold flex gap-3">
+            <div className="py-1 font-semibold flex gap-3">
               <span>Rating :</span>
               <Rating
                 readOnly
@@ -34,7 +34,7 @@ const Details = () => {
                 value={rating}
                 itemStyles={myStyles}
               />
-            </p>
+            </div>
             <p className="py-1 font-semibold">Quantity : {quantity}</p>
             <p className="py-1 font-semibold">Description : {description}</p>
           </div>

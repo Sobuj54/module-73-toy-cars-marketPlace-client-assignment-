@@ -14,7 +14,7 @@ const ToyTable = ({ loadedToy, count }) => {
         <td>{quantity}</td>
         <td>{seller}</td>
         <td className=" w-2/12">
-          <Link to={`/details/${_id}`} className="btn btn-primary">
+          <Link to={`/details/${_id}`} className="btn btn-primary ">
             view details
           </Link>
         </td>
