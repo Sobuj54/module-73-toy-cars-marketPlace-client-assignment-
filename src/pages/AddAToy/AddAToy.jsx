@@ -31,7 +31,7 @@ const AddAToy = () => {
       description,
     };
 
-    fetch("http://localhost:5000/addedToys", {
+    fetch("https://toy-cars-market-place-server.vercel.app/addedToys", {
       method: "POST",
       headers: {
         "content-type": "application/json",

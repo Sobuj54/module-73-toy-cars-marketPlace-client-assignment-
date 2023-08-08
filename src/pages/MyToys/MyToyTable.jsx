@@ -6,29 +6,32 @@ const MyToyTable = ({ loadedToy, count, allToys, setAllToys }) => {
   const { _id, seller, toy, subCategory, price, quantity, email } = loadedToy;
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/addedToys/${id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.deletedCount === 1) {
-          Swal.fire({
-            title: "Are you sure?",
-            text: "You won't be able to revert this!",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!",
-          }).then((result) => {
-            if (result.isConfirmed) {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(
+          `https://toy-cars-market-place-server.vercel.app/addedToys/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount === 1) {
               Swal.fire("Deleted!", "Your file has been deleted.", "success");
               const remaining = allToys.filter((toys) => toys._id !== id);
               setAllToys(remaining);
             }
           });
-        }
-      });
+      }
+    });
   };
 
   return (

@@ -12,14 +12,14 @@ const AllToys = () => {
       <table className="table">
         {/* head */}
         <thead>
-          <tr>
+          <tr className="text-[16px]">
             <th></th>
             <th>Toy Name</th>
             <th>Sub Category</th>
             <th>Price</th>
             <th>Quantity</th>
             <th>Seller</th>
-            <th>Action</th>
+            <th>Details</th>
           </tr>
         </thead>
         <tbody>

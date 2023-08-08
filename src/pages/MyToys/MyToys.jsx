@@ -7,12 +7,11 @@ const MyToys = () => {
   const [allToys, setAllToys] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/addedToys", {
+    fetch("https://toy-cars-market-place-server.vercel.app/addedToys", {
       method: "GET",
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setAllToys(data);
       });
   }, []);
@@ -27,7 +26,7 @@ const MyToys = () => {
       <table className="table">
         {/* head */}
         <thead>
-          <tr>
+          <tr className="text-[16px]">
             <th></th>
             <th>Toy Name</th>
             <th>Sub Category</th>

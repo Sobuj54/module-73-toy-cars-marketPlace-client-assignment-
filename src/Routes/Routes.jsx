@@ -89,7 +89,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/addedToys/${params.id}`),
+          fetch(
+            `https://toy-cars-market-place-server.vercel.app/addedToys/${params.id}`
+          ),
       },
     ],
   },
