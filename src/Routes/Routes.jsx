@@ -11,6 +11,7 @@ import AllToys from "../pages/AllToys/AllToys";
 import Details from "../pages/AllToys/Details";
 import MyToys from "../pages/MyToys/MyToys";
 import UpdateToy from "../pages/MyToys/UpdateToy";
+import ErrorPage from "../Error/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -90,6 +91,7 @@ const router = createBrowserRouter([
           ),
       },
     ],
+    errorElement: <ErrorPage></ErrorPage>,
   },
 ]);
 

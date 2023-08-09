@@ -14,7 +14,7 @@ const Details = () => {
     cars;
 
   return (
-    <div className="bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 ">
+    <div className="bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 py-5 lg:py-10">
       <div className="hero min-h-screen bg-inherit">
         <div className="hero-content flex-col lg:flex-row gap-10">
           <img
