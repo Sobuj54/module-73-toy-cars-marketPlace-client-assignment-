@@ -1,18 +1,32 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../ContextApi/ContextApi";
 import MyToyTable from "./MyToyTable";
+import { useNavigate } from "react-router-dom";
 
 const MyToys = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   const [allToys, setAllToys] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("https://toy-cars-market-place-server.vercel.app/addedToys", {
-      method: "GET",
-    })
+    fetch(
+      `https://toy-cars-market-place-server.vercel.app/addedToys?email=${user.email}`,
+      {
+        method: "GET",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("access-token")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
-        setAllToys(data);
+        if (!data.error) {
+          setAllToys(data);
+        } else {
+          logOut().then(() => {
+            navigate("/");
+          });
+        }
       });
   }, []);
 

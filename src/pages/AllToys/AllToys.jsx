@@ -9,7 +9,7 @@ const AllToys = () => {
   const [toys, setToys] = useState([]);
   const [limit, setLimit] = useState(20);
 
-  const url = `http://localhost:5000/addedToys?limit=${limit}&email=${user.email}`;
+  const url = `https://toy-cars-market-place-server.vercel.app/addedToys?limit=${limit}&email=${user.email}`;
 
   useEffect(() => {
     fetch(url, {

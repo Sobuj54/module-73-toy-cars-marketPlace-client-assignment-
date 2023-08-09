@@ -52,7 +52,7 @@ const ContextApi = ({ children }) => {
           email: loggedUser.email,
         };
 
-        fetch("http://localhost:5000/jwt", {
+        fetch("https://toy-cars-market-place-server.vercel.app/jwt", {
           method: "POST",
           headers: {
             "content-type": "application/json",
