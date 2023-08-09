@@ -45,6 +45,28 @@ const ContextApi = ({ children }) => {
     const unSubscribe = onAuthStateChanged(auth, (loggedUser) => {
       setLoading(false);
       setUser(loggedUser);
+
+      // jwt authorization
+      if (loggedUser && loggedUser.email) {
+        const currentUser = {
+          email: loggedUser.email,
+        };
+
+        fetch("http://localhost:5000/jwt", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(currentUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log("token :", data);
+            localStorage.setItem("access-token", data.token);
+          });
+      } else {
+        localStorage.removeItem("access-token");
+      }
     });
     return () => {
       return unSubscribe();
