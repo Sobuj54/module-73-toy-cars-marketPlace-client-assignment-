@@ -61,7 +61,6 @@ const ContextApi = ({ children }) => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log("token :", data);
             localStorage.setItem("access-token", data.token);
           });
       } else {

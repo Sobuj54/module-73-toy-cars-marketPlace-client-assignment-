@@ -1,19 +1,36 @@
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../ContextApi/ContextApi";
 import ToyTable from "./ToyTable";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 const AllToys = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
   const [toys, setToys] = useState([]);
   const [limit, setLimit] = useState(20);
 
+  const url = `http://localhost:5000/addedToys?limit=${limit}&email=${user.email}`;
+
   useEffect(() => {
-    fetch(
-      `https://toy-cars-market-place-server.vercel.app/addedToys?limit=${limit}`
-    )
+    fetch(url, {
+      method: "GET",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("access-token")}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
-        setToys(data);
+        if (!data.error) {
+          setToys(data);
+        } else {
+          logOut()
+            .then(() => {
+              navigate("/");
+            })
+            .catch((error) => console.log(error));
+        }
       });
-  }, [limit]);
+  }, [url, limit, navigate]);
 
   let count = 1;
 
