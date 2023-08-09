@@ -1,6 +1,14 @@
 import Swal from "sweetalert2";
+import AOS from "aos";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
 
 const ContactUs = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   const handleContact = (event) => {
     event.preventDefault();
 
@@ -25,7 +33,7 @@ const ContactUs = () => {
   return (
     <section className="py-10 bg-gradient-to-r from-fuchsia-600 to-blue-600 sm:py-16 lg:py-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-2xl mx-auto text-center" data-aos="fade-right">
           <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
             Contact us
           </h2>
@@ -36,7 +44,9 @@ const ContactUs = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto mt-12 overflow-hidden bg-gray-200 rounded-md shadow-lg shadow-slate-600 lg:mt-20">
+        <div
+          className="max-w-6xl mx-auto mt-12 overflow-hidden bg-gray-200 rounded-md shadow-lg shadow-slate-600 lg:mt-20"
+          data-aos="fade-up">
           <div className="grid items-stretch grid-cols-1 lg:grid-cols-5">
             <div className="lg:col-span-3">
               <div className="p-6 sm:p-10">

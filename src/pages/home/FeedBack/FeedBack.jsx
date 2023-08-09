@@ -1,8 +1,19 @@
+import AOS from "aos";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+
 const FeedBack = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
-    <section className="py-10 bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400 sm:py-16 lg:py-24">
+    <section className="py-10 bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400 sm:py-16 lg:py-24 ">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-2xl mx-auto text-center" data-aos="fade-left">
           <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
             What our customers say
           </h2>
@@ -12,7 +23,9 @@ const FeedBack = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 px-4 mt-12 sm:px-0 xl:mt-20 xl:grid-cols-4 sm:grid-cols-2">
+        <div
+          className="grid grid-cols-1 gap-6 px-4 mt-12 sm:px-0 xl:mt-20 xl:grid-cols-4 sm:grid-cols-2"
+          data-aos="fade-up">
           <div className="overflow-hidden bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 shadow-xl shadow-slate-600 rounded-md">
             <div className="px-5 py-6">
               <div className="flex items-center justify-between">

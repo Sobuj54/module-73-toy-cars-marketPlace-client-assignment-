@@ -2,6 +2,10 @@ import { Rating, Star } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import { Link } from "react-router-dom";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const myStyles = {
   itemShapes: Star,
   activeFillColor: "#ffb700",
@@ -11,8 +15,15 @@ const myStyles = {
 const CategoryCars = ({ car }) => {
   const { _id, name, picture, price, rating } = car;
 
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
-    <div className="card card-compact w-full  bg-inherit shadow-2xl shadow-stone-950">
+    <div
+      className="card card-compact w-full  bg-inherit shadow-2xl shadow-stone-950"
+      data-aos="fade-up">
       <figure>
         <img src={picture} alt="Shoes" />
       </figure>

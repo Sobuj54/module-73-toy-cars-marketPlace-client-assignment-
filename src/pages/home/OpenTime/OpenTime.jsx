@@ -1,8 +1,18 @@
 import { FaBusinessTime, FaPhone, FaSearchLocation } from "react-icons/fa";
+import AOS from "aos";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
 
 const OpenTime = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
-    <div className="w-full bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 py-7">
+    <div
+      className="w-full bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 py-7"
+      data-aos="fade-up">
       <h2 className="text-2xl md:text-4xl font-bold text-center mb-2 ">
         Available
       </h2>

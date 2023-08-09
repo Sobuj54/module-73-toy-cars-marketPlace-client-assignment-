@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../ContextApi/ContextApi";
 
 const Register = () => {
-  const { register, updateUserProfile, setUser } = useContext(AuthContext);
+  const { register, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleRegister = (event) => {
@@ -21,7 +21,6 @@ const Register = () => {
         // set user name and photo
         updateUserProfile(name, photo)
           .then(() => {
-            setUser(user);
             navigate("/");
           })
           .catch((error) => console.log(error));

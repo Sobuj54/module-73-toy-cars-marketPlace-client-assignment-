@@ -7,8 +7,10 @@ import ContextApi from "./ContextApi/ContextApi";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ContextApi>
-      <RouterProvider router={router} />
-    </ContextApi>
+    <div className="bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300">
+      <ContextApi>
+        <RouterProvider router={router} />
+      </ContextApi>
+    </div>
   </React.StrictMode>
 );

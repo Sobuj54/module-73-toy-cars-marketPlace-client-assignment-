@@ -1,8 +1,15 @@
 import { useEffect, useState } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import CategoryCars from "./CategoryCars";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ShopByCategory = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   const [tabIndex, setTabIndex] = useState(0);
   const [allCars, setAllCars] = useState([]);
 
@@ -22,7 +29,7 @@ const ShopByCategory = () => {
 
   return (
     <div className="bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 py-12 lg:py-28 px-5">
-      <div className="text-center mb-5">
+      <div className="text-center mb-5" data-aos="fade-right">
         <h2 className="text-2xl md:text-4xl font-bold">Toy Category</h2>
         <p className=" mt-2">
           Choose your favorite toy according to category..
@@ -32,7 +39,9 @@ const ShopByCategory = () => {
       {/* this tab will hold entire tab section */}
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         {/* tablist created tab title */}
-        <TabList className="lg:flex justify-center w-full  mx-auto space-x-4 mb-7">
+        <TabList
+          className="lg:flex justify-center w-full  mx-auto space-x-4 mb-7"
+          data-aos="fade-up">
           <Tab
             className={`tab tab-bordered ${tabIndex == 0 ? "tab-active" : ""}`}>
             Sports car

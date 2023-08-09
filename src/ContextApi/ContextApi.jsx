@@ -63,7 +63,6 @@ const ContextApi = ({ children }) => {
     logOut,
     logIn,
     googleLogIn,
-    setUser,
   };
 
   return (

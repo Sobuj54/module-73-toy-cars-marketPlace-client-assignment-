@@ -1,7 +1,16 @@
+import AOS from "aos";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+
 const Footer = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <footer className="footer footer-center p-10 bg-gradient-to-r from-indigo-200 via-purple-300 to-pink-200 text-cyan-950 lg:py-16 ">
-      <div>
+      <div data-aos="fade-left">
         <svg
           width="50"
           height="50"
@@ -18,7 +27,7 @@ const Footer = () => {
         </p>
         <p>Copyright © 2023 - All right reserved</p>
       </div>
-      <div>
+      <div data-aos="fade-right" data-aos-anchor-placement="bottom-bottom">
         <div className="grid grid-flow-col gap-4">
           <a href="https://twitter.com/" target="_blank" rel="noreferrer">
             <svg
