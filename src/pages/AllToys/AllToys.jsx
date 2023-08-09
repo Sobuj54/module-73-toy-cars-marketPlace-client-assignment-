@@ -1,8 +1,19 @@
-import { useLoaderData } from "react-router-dom";
 import ToyTable from "./ToyTable";
+import { useEffect, useState } from "react";
 
 const AllToys = () => {
-  const toys = useLoaderData();
+  const [toys, setToys] = useState([]);
+  const [limit, setLimit] = useState(20);
+
+  useEffect(() => {
+    fetch(
+      `https://toy-cars-market-place-server.vercel.app/addedToys?limit=${limit}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setToys(data);
+      });
+  }, [limit]);
 
   let count = 1;
 
@@ -31,6 +42,21 @@ const AllToys = () => {
           ))}
         </tbody>
       </table>
+      <div className="text-center mt-10 w-2/4 mx-auto">
+        {limit < 21 ? (
+          <button
+            onClick={() => setLimit(50)}
+            className="btn btn-accent w-full">
+            show more
+          </button>
+        ) : (
+          <button
+            onClick={() => setLimit(20)}
+            className="btn btn-neutral w-full">
+            Show Less
+          </button>
+        )}
+      </div>
     </div>
   );
 };

@@ -171,7 +171,7 @@ const ContactUs = () => {
                           />
                         </svg>
                         <span className="block ml-3 text-base text-gray-900">
-                          greenIndustries@example.com
+                          greenIndustries@gmail.com
                         </span>
                       </div>
 
@@ -191,10 +191,10 @@ const ContactUs = () => {
                         </svg>
                         <div className="ml-3">
                           <span className="block text-base text-gray-900">
-                            (316) 555-0116
+                            01631 058947
                           </span>
                           <span className="block mt-1 text-base text-gray-900">
-                            (316) 555-0116
+                            01776 635061
                           </span>
                         </div>
                       </div>
