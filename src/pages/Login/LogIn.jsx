@@ -109,7 +109,7 @@ const LogIn = () => {
                     src="https://www.vectorlogo.zone/logos/google/google-icon.svg"
                     alt=""
                   />
-                  <span>Continue With</span>
+                  <span>signin with google</span>
                 </div>
               </div>
             </form>
