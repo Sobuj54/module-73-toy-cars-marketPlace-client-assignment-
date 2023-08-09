@@ -9,8 +9,8 @@ const Gallery = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 px-5 py-2 lg:px-auto pt-10 lg:pt-14 ">
-      <div className="text-center mb-8 lg:mb-14" data-aos="fade-up">
+    <div className="bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 px-5 py-2 lg:px-auto pt-10 lg:pt-14 overflow-hidden ">
+      <div className="text-center mb-8 lg:mb-14" data-aos="fade-left">
         <h2 className="text-2xl md:text-4xl font-bold">Our Toy Gallery</h2>
         <p className=" mt-2">Few Toy Images From Our Toys.</p>
       </div>

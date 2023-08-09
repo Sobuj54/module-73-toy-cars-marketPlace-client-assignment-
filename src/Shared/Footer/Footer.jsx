@@ -9,7 +9,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="footer footer-center p-10 bg-gradient-to-r from-indigo-200 via-purple-300 to-pink-200 text-cyan-950 lg:py-16 ">
+    <footer className="footer footer-center p-10 bg-gradient-to-r from-indigo-200 via-purple-300 to-pink-200 text-cyan-950 lg:py-16 overflow-x-hidden">
       <div data-aos="fade-left">
         <svg
           width="50"
