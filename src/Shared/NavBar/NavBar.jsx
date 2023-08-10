@@ -46,7 +46,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="navbar bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300  lg:px-10">
+    <div className="navbar bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300  lg:px-10 max-w-7xl mx-auto">
       <div className="navbar-start ">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -70,10 +70,6 @@ const NavBar = () => {
             {list}
           </ul>
         </div>
-
-        {/* <div className="w-[70px] md:w-[80px]  md:h-[70px] ">
-          <img src={logo} />
-        </div> */}
         <h2 className="normal-case text-xl md:text-4xl text-black font-bold font-serif">
           Toy Emporium
         </h2>
