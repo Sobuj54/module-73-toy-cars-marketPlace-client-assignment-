@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../ContextApi/ContextApi";
+import icon from "../../../public/toy-car.png";
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -69,6 +70,9 @@ const NavBar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] y-[-1] p-2 shadow bg-base-100 rounded-box w-52">
             {list}
           </ul>
+        </div>
+        <div className="w-[60px] mr-3 hidden md:block">
+          <img src={icon} alt="" />
         </div>
         <h2 className="normal-case text-xl md:text-4xl text-black font-bold font-serif">
           Toy Emporium
