@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../ContextApi/ContextApi";
 import { Helmet } from "react-helmet";
 import titles from "../../title";
+import img from "../../assets/logo/undraw_sign_up_n6im.svg";
 
 const Register = () => {
   const { register, updateUserProfile } = useContext(AuthContext);
@@ -39,19 +40,17 @@ const Register = () => {
         <title>{titles.register}</title>
       </Helmet>
       <div className="hero min-h-screen bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 py-10">
-        <div className="hero-content flex-col lg:flex-row">
+        <div className="hero-content flex-col lg:flex-row lg:gap-20">
           <div className="text-center md:w-1/2 lg:text-left">
-            <h1 className="text-4xl md:text-5xl font-bold">Register now!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+            <img src={img} alt="" />
           </div>
-          <div className="card w-full max-w-md shadow-2xl shadow-slate-900 bg-gradient-to-r from-indigo-200 via-purple-200 to-slate-200">
+          <div className="card w-full max-w-sm shadow-2xl shadow-slate-900 bg-gradient-to-r from-indigo-200 via-purple-200 to-slate-200">
             <div className="card-body">
               {/* login form */}
               <form onSubmit={handleRegister}>
+                <h1 className="text-3xl md:text-4xl font-bold mb-5">
+                  Register now!
+                </h1>
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Name</span>
